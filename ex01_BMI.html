@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <h3>BMI를 계산하는 프로그램</h3>
+        <script>
+            // BMI지수= 몸무게(kg) ÷ (신장(m) × 신장(m)) 
+                var a = prompt("몸무게를 입력하세요");
+                var b = prompt("키를 입력하세요");
+                var kg = Number(a);
+                var cm = Number(b)/100;
+                var bmi = kg/(cm*cm);
+                var bmi = Math.floor(bmi);
+                document.write('당신의 BMI지수는'+" "+ bmi +"입니다.");
+        </script>
+</body>
+</html>

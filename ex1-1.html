@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo">자바스크립트 짜기</p>
+    <script>
+        var demo = document.getElementById("demo");
+        var size = 10;
+        function big() {
+            demo.style.fontsize = size + "px";
+            size = size + 1;
+        }
+        var tid = setInterval(big, 100);
+    </script>
+</body>
+
+</html>
