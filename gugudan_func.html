@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>개선된 구구단 프로그램</h1>
+    <script>
+//     함수를 활용해 반복적으로 발생하는 코드를 줄인다.
+//     공부를 위해 메인함수를 사용해 본다.
+//     구구단 계산 결과를 배열에 담는 로직을 새로운 함수로 분리한다.
+//     배열에 담은 데이터를 화면에 출력하는 로직을 새로운 함수로 분리한다.
+
+        function gugudan(x){
+            var ret = [];
+            for(var i = 1; i <= 9; i++){
+                ret[i] = x * i;
+            }
+            return ret;
+        }
+        
+        function printResult(x, ret){
+            document.write("<h2>"+x+"단</h2>");
+            for(var i = 1; i <= 9; i++){
+                var y = x * i;
+                document.write(x + " * " + i + " = " + y + "<br>");
+            }
+        }
+
+        function main(){
+            // 나머지 코드들은 여기에 
+            console.log("main 함수가 실행되었습니다.");
+            for (var n = 2; n <= 9; n++) {
+                result = gugudan(n);
+                printResult(n, result);
+            }
+        }
+        main();
+    </script>
+</body>
+
+</html>
