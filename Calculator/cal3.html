@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>프로그래밍의 조건문 경험</h1>
+    
+    <div>
+        First Number = <input type="text" id="n1"><br>
+        Calculation = <input type="text" id="cal"><br>
+        Second Number = <input type="text" id="n2"><br>
+        <button onclick = "calc()">CALC !</button>
+    </div>
+    <div id="output"></div>
+    <script>
+        function calc() {
+            var str1 = document.getElementById('n1').value;
+            var str2 = document.getElementById('n2').value;
+            var str3 = document.getElementById('cal').value;
+            var n1 = Number(str1);
+            var n2 = Number(str2);
+            var cal = str3;
+
+            var out = document.getElementById('output');
+            var str = "";
+            
+            switch(cal){
+                case '+': str = "PLUS : " + (n1 + n2) + "<br>";
+                    break;
+                case '-': str = "MINUS : " + (n1 - n2) + "<br>";
+                    break;
+                case '*': str = "MULTI : " + (n1 * n2) + "<br>";
+                    break;
+                case '/': str = "DIVIDE : " + (n1 / n2) + "<br>";
+                    break;
+                    
+            }
+            out.innerHTML = str;
+        }
+    </script>
+</body>
+</html>
