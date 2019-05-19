@@ -8,30 +8,28 @@
 </head>
 <body>
 
-    <h1>input을 이용한 문자열 계산기 구현하기</h1>
-    
-    <div>
-        First Number = <input type="text" id="n1"><br>
-        Second Number = <input type="text" id="n2"><br>
-        <button onclick = "calc()">CALC !</button>
-    </div>
+    <h1>Prompt를 이용한 문자열 계산기 구현하기</h1>
     <div id="output"></div>
+  
     <script>
-        function calc() {
-            var str1 = document.getElementById('n1').value;
-            var str2 = document.getElementById('n2').value;
-            var n1 = Number(str1);
-            var n2 = Number(str2);
-
-            var out = document.getElementById('output');
+        function main(){
+            console.log("안녕");
+            var output2 = document.getElementById("output");
             var str = "";
+            str += "<h2>계산기 구현하기</h2>";
+
+            var n1 = Number(prompt("insert First Number"));
+            var n2 = Number(prompt("insert Second Number"));
             str += "PLUS : " + (n1 + n2) + "<br>";
             str += "MINUS : " + (n1 - n2) + "<br>";
             str += "MULTI : " + (n1 * n2) + "<br>";
             str += "DIVIDE : " + (n1 / n2) + "<br>";
 
-            out.innerHTML = str;
+            output2.innerHTML = str;
+
         }
+
+    main();
     </script>
 </body>
 </html>
